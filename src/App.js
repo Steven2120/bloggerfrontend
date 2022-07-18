@@ -1,10 +1,11 @@
-import "./App.css";
 import React from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import BlogsPage from "./Pages/Blogs";
-import { useState, useEffect } from "react";
 import PostBlogPage from "./Pages/PostBlogPage";
 import BlogManager from "./Pages/BlogManager";
+import Home from "./Pages/Home";
+import "./App.css";
 
 const urlEndpoint = "http://localhost:4000";
 
@@ -76,6 +77,7 @@ function App() {
     <div className="App">
       <header>
         <Routes>
+          <Route path={"/home"} element={<Home />} />
           <Route
             index
             element={
